@@ -4,14 +4,14 @@
             {{ __('Topics') }}
         </h2>
     </x-slot>
-
-
     <div class="container mx-aut text-right py-2">
-        <button class="bg-purple-600 p-3 border rounded text-white">Create Topic</button>
+        <a href="{{ route('create.topic') }}">
+            <button class="bg-purple-600 p-3 border rounded text-white">Create Topic</button>
+        </a>
     </div>
 
     <div class="max-h-[500px] overflow-y-auto">
-        @include('pages.topics')
+        @include('pages.topics.topics')
     </div>
 
 </x-app-layout>
