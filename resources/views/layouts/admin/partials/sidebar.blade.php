@@ -43,7 +43,7 @@
 
                             <div class="menu-item">
 
-                                <a class="menu-link active" href="../../demo4/dist/index.html">
+                                <a class="menu-link active" href="#">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
@@ -51,207 +51,38 @@
                                 </a>
 
                             </div>
+                        </div>
+                    </div>
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start"
+                        class="menu-item here show py-2">
 
+                        <span class="menu-link menu-center">
+                            <span class="menu-icon me-0">
+                                <i class="bi bi-people fs-1"></i>
+                            </span>
+                        </span>
+
+
+                        <div class="menu-sub menu-sub-dropdown py-4 w-200px w-lg-225px">
 
                             <div class="menu-item">
 
-                                <a class="menu-link" href="../../demo4/dist/dashboards/ecommerce.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">eCommerce</span>
-                                </a>
+                                <div class="menu-content">
+                                    <span class="menu-section fs-5 fw-bolder ps-1 py-1">Home</span>
+                                </div>
 
                             </div>
 
 
                             <div class="menu-item">
 
-                                <a class="menu-link" href="../../demo4/dist/dashboards/projects.html">
+                                <a class="menu-link active" href="{{ route('users') }}">
                                     <span class="menu-bullet">
                                         <span class="bullet bullet-dot"></span>
                                     </span>
-                                    <span class="menu-title">Projects</span>
+                                    <span class="menu-title">Users</span>
                                 </a>
 
-                            </div>
-
-
-                            <div class="menu-item">
-
-                                <a class="menu-link" href="../../demo4/dist/dashboards/online-courses.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Online Courses</span>
-                                </a>
-
-                            </div>
-
-
-                            <div class="menu-item">
-
-                                <a class="menu-link" href="../../demo4/dist/dashboards/marketing.html">
-                                    <span class="menu-bullet">
-                                        <span class="bullet bullet-dot"></span>
-                                    </span>
-                                    <span class="menu-title">Marketing</span>
-                                </a>
-
-                            </div>
-
-                            <div class="menu-inner flex-column collapse" id="kt_app_sidebar_menu_dashboards_collapse">
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/bidding.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Bidding</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/pos.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">POS System</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/call-center.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Call Center</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/logistics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Logistics</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/website-analytics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Website Analytics</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/finance-performance.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Finance Performance</span>
-                                    </a>
-                                </div>
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/store-analytics.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Store Analytics</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/social.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Social</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/delivery.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Delivery</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/crypto.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Crypto</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/school.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">School</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/dashboards/podcast.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Podcast</span>
-                                    </a>
-
-                                </div>
-
-
-                                <div class="menu-item">
-
-                                    <a class="menu-link" href="../../demo4/dist/landing.html">
-                                        <span class="menu-bullet">
-                                            <span class="bullet bullet-dot"></span>
-                                        </span>
-                                        <span class="menu-title">Landing</span>
-                                    </a>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -260,4 +91,6 @@
             </div>
 
         </div>
+
+    </div>
     </div>

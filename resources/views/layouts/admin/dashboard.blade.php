@@ -46,30 +46,8 @@
 
                 @include('layouts.admin.partials.header')
                 <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-
-                    <div class="container-xxl" id="kt_content_container">
-
-                        <div class="row g-5 g-xl-8">
-
-                            <div class="col-xxl-4">
-
-                                <div class="card card-xl-stretch mb-5 mb-xl-8">
-
-                                    <div class="card-header border-0 py-5">
-                                    </div>
-
-
-                                    <div class="card-body d-flex flex-column">
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    @yield('content')
                 </div>
-
-
                 <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
 
                     <div class="container-xxl d-flex flex-column flex-md-row flex-stack">
@@ -88,25 +66,8 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="{{ asset('admin') }}/assets/plugins/global/plugins.bundle.js"></script>
     <script src="{{ asset('admin') }}/assets/js/scripts.bundle.js"></script>
     <script src="{{ asset('admin') }}/assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
@@ -129,6 +90,7 @@
     <script src="{{ asset('admin') }}/assets/js/custom/utilities/modals/upgrade-plan.js"></script>
     <script src="{{ asset('admin') }}/assets/js/custom/utilities/modals/select-location.js"></script>
     <script src="{{ asset('admin') }}/assets/js/custom/utilities/modals/users-search.js"></script>
+    @yield('script')
 </body>
 
 </html>

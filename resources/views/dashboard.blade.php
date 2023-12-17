@@ -4,7 +4,7 @@
             {{ __('Topics') }}
         </h2>
     </x-slot>
-    <div class="container mx-aut text-right py-2">
+    <div class="container mx-auto text-right py-2">
         <a href="{{ route('create.topic') }}">
             <button class="bg-purple-600 p-3 border rounded text-white">Create Topic</button>
         </a>
