@@ -16,7 +16,7 @@ return new class extends Migration
     {
         Schema::create('banned_users', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(User::class);
+            $table->foreignIdFor(User::class)->nullable()->constrained()->cascadeOnUpdate()->cascadeOnDelete();
             $table->dateTime('ban_start')->nullable();
             $table->dateTime('ban_end')->nullable();
             $table->timestamps();

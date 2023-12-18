@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('keywords', function (Blueprint $table) {
             $table->id();
+            $table->longText('name')->nullable();
             $table->timestamps();
         });
     }
