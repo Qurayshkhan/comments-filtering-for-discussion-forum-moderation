@@ -7,6 +7,7 @@
 
 
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+
         <div class="sm:mx-auto sm:w-full sm:max-w-sm">
             <img class="mx-auto h-10 w-auto" src="https://img.icons8.com/fluency/48/topic.png" alt="topic"/
                 alt="Your Company">
@@ -53,5 +54,9 @@
             </form>
         </div>
     </div>
-
+    <script>
+        var quill = new Quill('#content', {
+            theme: 'snow'
+        });
+    </script>
 </x-app-layout>

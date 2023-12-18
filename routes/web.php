@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\TopicController as AdminTopicController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
@@ -31,8 +32,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/remove-ban/{userId}', [UserController::class, 'removeBan'])->name('user.remove.ban');
     Route::post('/changes-status/{userId}', [UserController::class, 'statusChange'])->name('user.changes.status');
     Route::post('/add-moderators', [UserController::class, 'storeModerator'])->name('admin.add.moderators');
+    Route::post('/user-delete/{userId}', [UserController::class, 'deleteUser'])->name('admin.delete.user');
+    Route::get('/add-topics-keyword', [AdminTopicController::class, 'topicKeywords'])->name('admin.topic.keywords');
+    Route::get('/get-topics', [AdminTopicController::class, 'topics'])->name('admin.topics');
+    Route::post('/delete-topics/{topicId}', [AdminTopicController::class, 'deleteTopic'])->name('admin.delete.topics');
+    Route::post('/add-keyword', [AdminTopicController::class, 'addKeyWords'])->name('admin.add.keyword');
+    Route::post('/update-keyword', [AdminTopicController::class, 'updateKeyWords'])->name('admin.update.keyword');
+    Route::post('/delete-keyword/{keywordId}', [AdminTopicController::class, 'deleteKeyWord'])->name('admin.delete.keyword');
 });
-Route::prefix('normal_user')->middleware('auth')->group(function () {
+Route::prefix('normal_user')->middleware(['auth', 'roleMiddleware'])->group(function () {
     Route::get('/create-topic', [TopicController::class, 'create'])->name('create.topic');
     Route::post('/store-topic', [TopicController::class, 'storeTopic'])->name('store.topic');
     Route::get('/topic/details/{topic}', [TopicController::class, 'details'])->name('topic.details');

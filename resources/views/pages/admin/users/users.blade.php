@@ -56,15 +56,18 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
+                                    <input type="hidden" name="user_id" id="edit_user_id">
                                     <label for="">Name</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Enter name">
+                                    <input type="text" id="name" name="name" class="form-control"
+                                        placeholder="Enter name">
                                     <x-input-error :messages="$errors->get('name')" class="mt-2" />
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Email</label>
-                                    <input type="text" name="email" class="form-control" placeholder="Enter email">
+                                    <input type="text" name="email" id="email" class="form-control"
+                                        placeholder="Enter email">
                                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                                 </div>
                             </div>
@@ -130,10 +133,12 @@
                     <div>
                         <h3 class="card-title">Users</h3>
                     </div>
-                    <div>
-                        <button class="btn btn-primary" type="button" data-bs-toggle="modal"
-                            data-bs-target="#kt_modal_modurator">Add moderators</button>
-                    </div>
+                    @if (auth()->user()->role == 'admin')
+                        <div>
+                            <button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#kt_modal_modurator">Add moderators</button>
+                        </div>
+                    @endif
                 </div>
                 <div class="card-toolbar">
                     <a href="#" class="btn btn-icon btn-sm btn-active-color-primary" data-kt-card-action="remove"
@@ -169,17 +174,26 @@
                                     </td>
                                     <td>
                                         <div class="d-flex gap-2">
-                                            <form action="{{ route('user.changes.status', ['userId' => $user->id]) }}"
-                                                method="POST">
-                                                @csrf
-                                                <button class="btn btn-sm btn-primary">Chages status</button>
-                                            </form>
+                                            @if (auth()->user()->role == 'admin')
+                                                <form action="{{ route('user.changes.status', ['userId' => $user->id]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    <button class="btn btn-sm btn-primary">Chages status</button>
+                                                </form>
+                                            @endif
                                             <button class="btn btn-sm btn-danger" type="button" data-bs-toggle="modal"
                                                 data-bs-target="#kt_modal_1" onclick="addUserId({{ $user->id }})">Add
                                                 Ban</button>
                                             <a href="{{ route('user.remove.ban', ['userId' => $user->id]) }}">
                                                 <button class="btn btn-sm btn-danger">Remove Ban</button>
                                             </a>
+                                            @if (auth()->user()->role == 'admin')
+                                                <form action="{{ route('admin.delete.user', ['userId' => $user->id]) }}"
+                                                    method="POST">
+                                                    @csrf
+                                                    <button class="btn btn-sm btn-danger">Delete user</button>
+                                                </form>
+                                            @endif
                                         </div>
                                     </td>
                                 </tr>
@@ -196,6 +210,12 @@
         $("#kt_datatable_horizontal_scroll").DataTable();
         let addUserId = (user_id) => {
             $('#userId').val(user_id);
+        }
+        let editUserDetails = (user_id, name, email) => {
+            $('#edit_user_id').val(user_id);
+            $('#name').val(name);
+            $('#email').val(email);
+            $('.modal-title').html('Edit User');
         }
     </script>
 @endsection

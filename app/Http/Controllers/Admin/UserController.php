@@ -74,7 +74,7 @@ class UserController extends Controller
 
         ]);
 
-        $user = User::create([
+        $user = User::updateOrCreate(['id' => $request->user_id], [
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
@@ -83,5 +83,12 @@ class UserController extends Controller
         ]);
 
         return redirect()->back()->with('status', 'Moderator add successfully');
+    }
+
+    public function deleteUser($userId)
+    {
+        $user = User::find($userId);
+        $user->delete();
+        return redirect()->back()->with('status', 'User delete successfully');
     }
 }

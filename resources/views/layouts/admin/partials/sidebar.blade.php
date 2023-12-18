@@ -3,7 +3,7 @@
         data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_toggle">
 
         <div class="aside-logo d-none d-lg-flex flex-column align-items-center flex-column-auto py-8" id="kt_aside_logo">
-            <a href="../../demo4/dist/index.html">
+            <a href="{{ route('dashboard') }}">
                 <img alt="Logo" src="{{ asset('admin') }}/assets/media/logos/demo4.svg" class="h-55px" />
             </a>
         </div>
@@ -68,7 +68,7 @@
                             <div class="menu-item">
 
                                 <div class="menu-content">
-                                    <span class="menu-section fs-5 fw-bolder ps-1 py-1">Home</span>
+                                    <span class="menu-section fs-5 fw-bolder ps-1 py-1">User Managment</span>
                                 </div>
 
                             </div>
@@ -83,6 +83,44 @@
                                     <span class="menu-title">Users</span>
                                 </a>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="right-start"
+                        class="menu-item here show py-2">
+
+                        <span class="menu-link menu-center">
+                            <span class="menu-icon me-0">
+                                <i class="fonticon-layers fs-1"></i>
+                            </span>
+                        </span>
+
+
+                        <div class="menu-sub menu-sub-dropdown py-4 w-200px w-lg-225px">
+
+                            <div class="menu-item">
+
+                                <div class="menu-content">
+                                    <span class="menu-section fs-5 fw-bolder ps-1 py-1">Topic Managment</span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="menu-item">
+
+                                <a class="menu-link" href="{{ route('admin.topic.keywords') }}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Topic Keywords</span>
+                                </a>
+                                <a class="menu-link" href="{{ route('admin.topics') }}">
+                                    <span class="menu-bullet">
+                                        <span class="bullet bullet-dot"></span>
+                                    </span>
+                                    <span class="menu-title">Topics</span>
+                                </a>
                             </div>
                         </div>
                     </div>

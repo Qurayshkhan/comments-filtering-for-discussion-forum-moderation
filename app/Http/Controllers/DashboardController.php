@@ -16,7 +16,7 @@ class DashboardController extends Controller
         if (auth()->user()->role == 'normal_user') {
             return view('dashboard');
         } else {
-            return view('layouts.admin.dashboard');
+            return view('pages.admin.dashboard.dashboard');
         }
     }
 }
